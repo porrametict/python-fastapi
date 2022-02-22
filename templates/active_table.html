@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Active : {{active_number}}</h1>
+    <form action="/change-post" method="post">
+    <select name="number" >
+        <option value="0" disabled selected>Please select</option>
+        <option value="1">Default (1)</option>
+        <option value="2">Add fields (2)</option>
+        <option value="3">Remove fields (3)</option>
+        <option value="4">Add & Remove fields (4)</option>
+      </select>
+      <button type="submit">Submit</button>
+      </body>
+</body>
+</html>
