@@ -14,16 +14,16 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-mydb = mysql.connector.connect(
+
+
+async def get_active_number () :
+    mydb = mysql.connector.connect(
     host="remotemysql.com",
     user="wdbVRmtXy0",
     password="QI7uvUL53y",
     database="wdbVRmtXy0"
-
-)
-mycursor = mydb.cursor()
-
-async def get_active_number () :
+    )
+    mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM active_table")
     my_result = mycursor.fetchall()
     number = my_result[0][0]
@@ -46,6 +46,13 @@ async def get_active_table(request : Request):
 
 @app.post("/change-post")
 async def change_active_number(number : int = Form(...)):
+    mydb = mysql.connector.connect(
+    host="remotemysql.com",
+    user="wdbVRmtXy0",
+    password="QI7uvUL53y",
+    database="wdbVRmtXy0"
+    )
+    mycursor = mydb.cursor()
     sql = f"UPDATE `active_table` SET `table` = {number};"
     mycursor.execute(sql)
     mydb.commit()
