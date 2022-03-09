@@ -2,7 +2,7 @@ from fastapi import FastAPI,Request,Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import RedirectResponse
+from fastapi.responses import RedirectResponse,PlainTextResponse
 
 import mysql.connector
 import uvicorn
@@ -58,3 +58,8 @@ async def change_active_number(number : int = Form(...)):
     mydb.commit()
     return RedirectResponse("/change",status_code=302)
 
+
+
+@app.get('/text',response_class=PlainTextResponse)
+async def get_text():
+    return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
