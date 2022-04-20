@@ -1,6 +1,5 @@
 user1 = [
     {
-        "id": 1,
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
@@ -23,7 +22,6 @@ user1 = [
         }
     },
     {
-        "id": 2,
         "name": "Ervin Howell",
         "username": "Antonette",
         "email": "Shanna@melissa.tv",
@@ -51,7 +49,6 @@ user1 = [
 
 user2 = [
     {
-        "id": 1,
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
@@ -76,7 +73,6 @@ user2 = [
         "new_field_2": "test_new_field",
     },
     {
-        "id": 2,
         "name": "Ervin Howell",
         "username": "Antonette",
         "email": "Shanna@melissa.tv",
@@ -103,7 +99,6 @@ user2 = [
 #  delete_filed company ,website
 user3 = [
     {
-        "id": 1,
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
@@ -121,7 +116,6 @@ user3 = [
 
     },
     {
-        "id": 2,
         "name": "Ervin Howell",
         "username": "Antonette",
         "email": "Shanna@melissa.tv",
@@ -143,7 +137,6 @@ user3 = [
 
 user4 = [
     {
-        "id": 1,
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
@@ -160,7 +153,6 @@ user4 = [
         "phone": "1-770-736-8031 x56442",
         "new_field": "test_new_field",
     }, {
-        "id": 2,
         "name": "Ervin Howell",
         "username": "Antonette",
         "email": "Shanna@melissa.tv",
